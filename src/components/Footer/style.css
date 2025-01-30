@@ -1,0 +1,20 @@
+footer{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.logo-wrapper{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+p{
+    font-size: 14px;
+    font-weight: 400;
+    color:#21243D;
+}
