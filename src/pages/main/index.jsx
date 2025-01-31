@@ -7,12 +7,12 @@ const Main = () => {
 
     useEffect(() => {
         if (!localStorage.getItem("access_token")) {
-            navigate("/login");
+            navigate("/account");
         }
     }, [navigate]);
 
     return (
-        <div>
+        <div className="bg-[#fff]">
             <Layout />
         </div>
     );

@@ -1,15 +1,10 @@
-"use client";
-
-import { useNavigate } from "react-router-dom";
 import "../style.css";
 import IDP from "../assets/images/png/idp-ielts.webp";
-import { Outlet } from "react-router-dom";
 
 const Layout = () => {
-    const navigate = useNavigate();
     return (
         <>
-            <main className="pr-[55px] bg-[#fff]">
+            <main className="pr-[55px] bg-[#Fff]">
                 <div className="flex justify-between">
                     <div className="pt-[70px] flex flex-col items-start text-[#fff] pl-[76px] one-div">
                         <h1 className="text-[51px] font-[600] leading-[62px] mb-[98px]">
@@ -24,10 +19,7 @@ const Layout = () => {
                             Already have an IDP IELTS account?
                         </h2>
 
-                        <button
-                            onClick={() => navigate("/login")}
-                            className="w-[275px] h-[60px] font-[700] hover:text-[#fff] duration-150 transition-all hover:border-[1px] hover:bg-[#A2071F] hover:border-[#fff] bg-[#fff] rounded-[5px] text-[#A2071F] text-[20px]"
-                        >
+                        <button className="w-[275px] h-[60px] font-[700] hover:text-[#fff] duration-150 transition-all hover:border-[1px] hover:bg-[#A2071F] hover:border-[#fff] bg-[#fff] rounded-[5px] text-[#A2071F] text-[20px]">
                             Log in
                         </button>
                     </div>
@@ -40,11 +32,10 @@ const Layout = () => {
                         <div className="flex items-center">
                             <input
                                 type="text"
-                                required
                                 className="outline-none border-[#00000020] rounded-l-[10px] border-[1px] pt-[15px] pb-[10px] pl-[17px] pr-[73px]"
                                 placeholder="example@mail.com"
                             />
-                            <button type="submit" className="p-[11px] outline-none hover:text-[#fff] duration-200 transition-all text-[20px] w-[75px] rounded-r-[10px] font-[700] text-[#BFC0C0] bg-[#919191]">
+                            <button className="p-[11px] outline-none hover:text-[#fff] duration-200 transition-all text-[20px] w-[75px] rounded-r-[10px] font-[700] text-[#BFC0C0] bg-[#919191]">
                                 Next
                             </button>
                         </div>
@@ -55,7 +46,6 @@ const Layout = () => {
                     </div>
                 </div>
 
-                <Outlet />
             </main>
         </>
     );
