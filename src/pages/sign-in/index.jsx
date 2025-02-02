@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import 'boxicons/css/boxicons.min.css';
 import IDP from "../../assets/images/png/idp-ielts.webp";
@@ -7,16 +7,6 @@ import BackButton from "../../assets/images/svg/back-button.svg";
 const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
-    const formRef = useRef(null);
-
-    const handleSubmit = () => {
-        if (formRef.current) {
-            formRef.current.reportValidity();
-            if (formRef.current.checkValidity()) {
-                navigate("/account");
-            }
-        }
-    };
 
     return (
         <main className='pr-[55px] pb-[250px] bg-[#fff]'>
@@ -32,7 +22,7 @@ const Login = () => {
                 <div className='mt-[40px] flex flex-col lg:block lg:flex-row items-center pl-[50px] lg:mt-[165px] mr-[0px] lg:mr-[140px]'>
                     <h1 className='lg:text-[22px] font-[600] mb-[35px] text-[18px] text-center lg:text-start'>Log in with your email</h1>
 
-                    <form ref={formRef} className='flex flex-col items-center mb-[20px]'>
+                    <form className='flex flex-col items-center mb-[20px]'>
                         <input type="email" required className='outline-none w-[315px] bg-[#FAFAFA] h-[60px] border-[#00000041] pl-[25px] rounded-t-[10px] border-t-[1px] border-l-[1px] border-r-[1px]' placeholder='yourname@gmail.com' />
                         <div className='outline-none pr-[5px] flex justify-between items-center w-[315px] bg-[#FAFAFA] h-[60px] border-[#00000041] pl-[25px] rounded-b-[10px] border-[1px]'>
                             <input type={showPassword ? "text" : "password"} required className='outline-none w-[250px] bg-[#FAFAFA]' placeholder="********" />
@@ -45,7 +35,7 @@ const Login = () => {
 
                     <span className='text-[13px] lg:mb-[70px] mb-[50px] text-[#656565] hover:text-[#656565d0] flex relative lg:flex lg:left-[0px] left-[90px] justify-end cursor-pointer'>Forgot your password?</span>
 
-                    <button type='button' onClick={handleSubmit} className='w-[270px] h-[60px] rounded-[2px] text-[21px] text-[#C0BFC0] hover:bg-[#05AAAD] hover:text-[#fff] transition-all duration-200 font-[700] bg-[#919191]'>
+                    <button type='button' onClick={()=> navigate("/account")} className='w-[270px] h-[60px] rounded-[2px] text-[21px] text-[#C0BFC0] hover:bg-[#05AAAD] hover:text-[#fff] transition-all duration-200 font-[700] bg-[#919191]'>
                         Log in
                     </button>
                 </div>
