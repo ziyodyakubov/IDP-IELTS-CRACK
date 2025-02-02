@@ -39,10 +39,19 @@ ul{
 }
 
 
+
 .one-div{
   background-image: url("./assets/images/png/red-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   width:70vh;
   height: 100vh;
+}
+
+
+@media (max-width: 640px) {
+  .one-div {
+    height: 50vh;
+    display:none;
+  }
 }

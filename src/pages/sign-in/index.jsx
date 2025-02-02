@@ -33,11 +33,11 @@ const Login = () => {
                     <h1 className='text-[22px] font-[600] mb-[35px]'>Log in with your email</h1>
 
                     <form ref={formRef} className='flex flex-col items-center mb-[20px]'>
-                        <input type="text" required className='outline-none w-[315px] bg-[#FAFAFA] h-[60px] border-[#00000041] pl-[25px] rounded-t-[10px] border-t-[1px] border-l-[1px] border-r-[1px]' placeholder='yourname@gmail.com' />
+                        <input type="email" required className='outline-none w-[315px] bg-[#FAFAFA] h-[60px] border-[#00000041] pl-[25px] rounded-t-[10px] border-t-[1px] border-l-[1px] border-r-[1px]' placeholder='yourname@gmail.com' />
                         <div className='outline-none pr-[5px] flex justify-between items-center w-[315px] bg-[#FAFAFA] h-[60px] border-[#00000041] pl-[25px] rounded-b-[10px] border-[1px]'>
                             <input type={showPassword ? "text" : "password"} required className='outline-none w-[250px] bg-[#FAFAFA]' placeholder="********" />
                             <i
-                                className={`bx text-[17px] cursor-pointer text-[#00000078] ${showPassword ? 'bxs-show' : 'bxs-hide'}`} 
+                                className={`bx text-[17px] cursor-pointer text-[#00000078] ${showPassword ? 'bxs-show' : 'bxs-hide'}`}
                                 onClick={() => setShowPassword(!showPassword)}
                             ></i>
                         </div>
