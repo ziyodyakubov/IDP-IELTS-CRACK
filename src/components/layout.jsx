@@ -9,9 +9,9 @@ const Layout = () => {
     const navigate = useNavigate();
     return (
         <>
-            <main className="pr-[55px] bg-[#fff]">
-                <div className="flex justify-between">
-                    <div className="pt-[70px] flex flex-col items-start text-[#fff] pl-[76px] one-div">
+            <main className="pr-[55px] pl-[35px] lg:pl-[0px] bg-[#fff]">
+                <div className="flex flex-col lg:flex-row lg:justify-between">
+                    <div className="pt-[70px] relative bottom-[500px] lg:top-[0px] flex flex-col items-start text-[#fff] pl-[76px] one-div">
                         <h1 className="text-[51px] font-[600] leading-[62px] mb-[98px]">
                             Create your <br /> account
                         </h1>
@@ -32,8 +32,8 @@ const Layout = () => {
                         </button>
                     </div>
 
-                    <div className="mt-[165px] mr-[140px]">
-                        <h1 className="text-[22px] font-[600] mb-[27px]">
+                    <div className="lg:mt-[165px] relative top-[300px] lg:top-[0] mt-[0px] mr-[0px] lg:mr-[140px]">
+                        <h1 className="lg:text-[22px] text-[16px] font-[600] mb-[27px]">
                             Sign-up using your email
                         </h1>
 
@@ -51,7 +51,7 @@ const Layout = () => {
                     </div>
 
                     <div>
-                        <img className="w-[220px] mt-[15px]" src={IDP} alt="idp" />
+                        <img className="w-[220px] hidden lg:block mt-[15px]" src={IDP} alt="idp" />
                     </div>
                 </div>
 
