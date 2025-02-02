@@ -19,6 +19,10 @@ body{
   margin: 0 auto !important;
 }
 
+.bg-gray-100{
+  background-color: #fff !important;
+}
+
 .bgred {
   background-image: url("./assets/images/png/shape.png");
   background-repeat: no-repeat;
@@ -51,7 +55,10 @@ ul{
 
 @media (max-width: 640px) {
   .one-div {
-    height: 50vh;
-    display:none;
+    display:relative;
+    background-image: url("./assets/images/png/responsive.png");
+    width:390px;
+    height:221px;
+    background-position: top;
   }
 }
